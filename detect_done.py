@@ -63,8 +63,9 @@ if __name__ == '__main__':
             print(sucess)
             continue
         BD = Detect(img)
-        img_b, corner_pts = BD.board_main()
-        img_ball, ballpt = BD.ball_main()
+        corner_pts = BD.board_main()
+        ballpt = BD.ball_main()
+        img_show = BD.getImg(img, corner_pts, ballpt)
 
 
         cv2.imshow("img_DONE", img)
